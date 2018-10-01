@@ -126,14 +126,6 @@ maxconnections=256
 masternode=1
 masternodeaddr=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-addnode=159.89.120.208
-addnode=159.89.120.226
-addnode=165.227.230.24
-addnode=159.65.63.79
-addnode=159.203.10.85
-addnode=138.197.151.120
-addnode=139.59.38.142
-addnode=159.89.170.123
 EOF
 }
 
@@ -273,6 +265,5 @@ clear
 
 checks
 prepare_system
-check_swap
-compile_node
+download_node
 setup_node
