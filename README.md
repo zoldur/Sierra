@@ -1,5 +1,5 @@
 # Sierra Coin
-Shell script to install an [Sierra Masternode](http://www.sierracoin.org/)) on a Linux server running Ubuntu 16.04. Use it on your own risk.
+Shell script to install an [Sierra Masternode](https://www.sierracoin.net/) on a Linux server running Ubuntu 16.04. Use it on your own risk.
 
 ***
 ## VPS installation:
