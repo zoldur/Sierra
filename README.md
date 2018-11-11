@@ -14,7 +14,7 @@ bash sierra_install.sh
 After the MN is up and running, you need to configure the desktop wallet accordingly. Here are the steps for Windows Wallet
 1. Open the Sierra Coin Desktop Wallet.
 2. Go to RECEIVE and create a New Address: **MN1**
-3. Send **1000** **SIERRA** to **MN1**. You need to send all 1000 coins in one single transaction.
+3. Send **10000** **SIERRA** to **MN1**. You need to send all 10000 coins in one single transaction.
 4. Wait for 15 confirmations.
 5. Go to **Tools -> "Debug console - Console"**
 6. Type the following command: **masternode outputs**
@@ -56,6 +56,24 @@ systemctl start Sierra #To start Sierra service.
 systemctl stop Sierra #To stop Sierra service.
 systemctl is-enabled Sierra #To check whetether Sierra service is enabled on boot or not.
 ```
+***
+
+## Masternode update:
+In order to update your Sierra Masternode to version 2.0.0.0, please run the following commands:
+```
+cd /tmp
+wget -N https://github.com/sierracoin-foundation/sierra/releases/download/v.2.0.0/daemon-linux2.0.0.zip
+unzip -x daemon-linux2.0.0.zip
+cd daemon
+chmod +x *
+systemctl stop Sierra
+mv sierrad sierra-cli /usr/local/bin
+systemctl start Sierra
+cd /tmp
+rm -r ./{daemon-linux2.0.0.zip,daemon}
+sierra-cli getinfo
+```
+Open your desktop wallet and start the node from there.
 ***
 
 ## Donations:
