@@ -26,7 +26,7 @@ function download_node() {
   wget -q $COIN_TGZ
   compile_error
   unzip -x $COIN_ZIP >/dev/null 2>&1
-  cp daemon-linux/$COIN_DAEMON daemon-linux/$COIN_CLI $COIN_PATH >/dev/null 2>&1
+  cp daemon/$COIN_DAEMON daemon/$COIN_CLI $COIN_PATH >/dev/null 2>&1
   chmod +x $COIN_PATH$COIN_DAEMON $COIN_PATH$COIN_CLI >/dev/null 2>&1
   cd - >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
