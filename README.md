@@ -68,6 +68,7 @@ cd daemon
 chmod +x *
 systemctl stop Sierra
 mv sierrad sierra-cli /usr/local/bin
+rm -r /root/.sierra/mainnet/{backups,blocks,budget.dat,chainstate,db.log,debug.log,fee_estimates.dat,masternode.conf,mncache.dat,mnpayments.dat,peers.dat}
 systemctl start Sierra
 cd /tmp
 rm -r ./{daemon-linux2.0.0.zip,daemon}
